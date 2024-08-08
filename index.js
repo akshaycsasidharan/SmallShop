@@ -13,8 +13,8 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/items",itemsRoute);
-app.use("/api/bills",billsRoute);
+app.use("/api/items", itemsRoute);
+app.use("/api/bills", billsRoute);
 
 const MONGO_URL = process.env.MONGO_URL;
 
