@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import helmet from "helmet";
 import dotenv from "dotenv";
-import itemsRoute from "./routes/items";
-import billsRoute from "./routes/bills";
+import itemsRoute from "./routes/items.js";
+import billsRoute from "./routes/bills.js";
 
 dotenv.config();
 
