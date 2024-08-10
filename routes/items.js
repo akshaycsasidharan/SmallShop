@@ -1,17 +1,23 @@
 import express from "express";
 
-import { addItem, getItems, getItem, updateItem, deleteItem} from "../controllers/ItemController.js";
+import {
+  addItem,
+  getItems,
+  getItem,
+  updateItem,
+  deleteItem,
+} from "../controllers/ItemController.js";
 
 const router = express.Router();
 
-router.post("/items", addItem);
+router.post("/", addItem);
 
-router.get("/items", getItems);
+router.get("/", getItems);
 
-router.get("/items:id",getItem);
+router.get("/:id", getItem);
 
-router.put("/items/:id",updateItem);
+router.put("/:id", updateItem);
 
-router.delete("/items/:id",deleteItem);
+router.delete("/:id", deleteItem);
 
 export default router;

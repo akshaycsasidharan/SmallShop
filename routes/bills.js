@@ -1,11 +1,16 @@
 import express from "express";
-import{
-    billItems
-
+import {
+  createBill,
+  getBills,
+  getBill,
 } from "../controllers/BillController.js";
 
-const router = express.Router;
+const router = express.Router();
 
-router.get("/billitems",billItems);
+router.post("/", createBill);
+
+router.get("/", getBills);
+
+router.get("/:id", getBill);
 
 export default router;
